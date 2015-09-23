@@ -1,7 +1,12 @@
-h2 {
-  color: black;
+h2, h4{
+  font-family: 'Quicksand', sans-serif;
+  color: white;
 }
 
+#front-page {
+  padding-right: 10%;
+  text-align: right
+}
 
 .logo {
   padding: 1% 0 1% 45%
@@ -14,11 +19,15 @@ h2 {
 }*/
 
 .navbar {
-  padding-left: 36%;
+  padding-left: 34%;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .jumbotron {
-  height: 360px;
+  height: 400px;
+  background: url("/img/running.jpg");
+  background-size: cover;
+  opacity: 0.9;
 }
 
 

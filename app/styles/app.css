@@ -1,0 +1,48 @@
+h2 {
+  color: black;
+}
+
+
+.logo {
+  padding: 1% 0 1% 45%
+
+}
+
+
+/*.nav {
+  padding-left: 35%;
+}*/
+
+.navbar {
+  padding-left: 36%;
+}
+
+.jumbotron {
+  height: 360px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****RESPONSIVE CSS****/
+
+@media(max-width: 800px) {
+  .nav {
+  padding-left: 0px;
+  }
+}

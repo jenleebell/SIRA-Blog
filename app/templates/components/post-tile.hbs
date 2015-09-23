@@ -5,7 +5,7 @@
   <h2><strong>{{post.title}} </strong><span class="author-name"> by {{post.author}}</span></h2>
   <p><img src={{post.image}} /></p>
   <h4>{{post.description}}</h4>
-  <!-- {{update-post post=post update="update"}} -->
+  {{update-post post=post update="update"}}
   <button class='btn btn-danger' {{action 'delete' post}}>Delete</button>
   <br>
 </div>

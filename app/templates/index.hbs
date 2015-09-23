@@ -12,7 +12,7 @@
   <div id="postings">
     <div class='row'>
     {{#each model as |post|}}
-      {{post-tile post=post destroyPost="destroyPost"}}
+      {{post-tile post=post update="update" destroyPost="destroyPost"}}
     {{/each}}
 
     {{new-post save2="save3"}}

@@ -11,39 +11,54 @@
 <div class='container'>
   <div id="postings">
     <div class='row'>
-      <div class='col-md-8'>
-        <h2>Test Post</h2>
-      </div>
-      <div class='col-md-4'>
-        <h2>Test Ad</h2>
-      </div>
-    </div>
-    <br>
-    <div class='row'>
-      <div class='col-md-4'>
-        <h2>Test Ad</h2>
-      </div>
-      <div class='col-md-8'>
-        <h2>Test Post</h2>
-      </div>
-    </div>
-    <br>
-    <div class='row'>
-      <div class='col-md-8'>
-        <h2>Test Post</h2>
-      </div>
-      <div class='col-md-4'>
-        <h2>Test Ad</h2>
-      </div>
-    </div>
-    <br>
-    <div class='row'>
-      <div class='col-md-4'>
-        <h2>Test Ad</h2>
-      </div>
-      <div class='col-md-8'>
-        <h2>Test Post</h2>
-      </div>
+    {{#each model as |post|}}
+      {{post-tile post=post destroyPost="destroyPost"}}
+    {{/each}}
+
+    {{new-post save2="save3"}}
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+     <!-- <div class='col-md-8'>
+        <h2>Test Post</h2>
+      </div>
+      <div class='col-md-4'>
+        <h2>Test Ad</h2>
+      </div>
+    </div>
+    <br>
+    <div class='row'>
+      <div class='col-md-4'>
+        <h2>Test Ad</h2>
+      </div>
+      <div class='col-md-8'>
+        <h2>Test Post</h2>
+      </div>
+    </div>
+    <br>
+    <div class='row'>
+      <div class='col-md-8'>
+        <h2>Test Post</h2>
+      </div>
+      <div class='col-md-4'>
+        <h2>Test Ad</h2>
+      </div>
+    </div>
+    <br>
+    <div class='row'>
+      <div class='col-md-4'>
+        <h2>Test Ad</h2>
+      </div>
+      <div class='col-md-8'>
+        <h2>Test Post</h2>
+      </div>
+    </div>  -->

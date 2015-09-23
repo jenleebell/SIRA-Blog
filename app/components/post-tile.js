@@ -1,9 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  delete(post) {
+  actions: {
+    delete(post) {
     if(confirm("Are you sure you want to delete this post?")) {
-      this.sendAction('destroyRental', rental);
+      this.sendAction('destroyPost', post);
+      }
     }
   }
 });

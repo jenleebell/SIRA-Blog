@@ -2,16 +2,10 @@
 
 
 <div class='col-md-8'>
-  <h2>{{post.title}}</h2>
-  <h4>{{post.description}}</h4>
+  <h2><strong>{{post.title}} </strong><span class="author-name"> by {{post.author}}</span></h2>
   <p><img src={{post.image}} /></p>
-  <button {{action 'delete' post}}>Delete</button>
+  <h4>{{post.description}}</h4>
+  <!-- {{update-post post=post update="update"}} -->
+  <button class='btn btn-danger' {{action 'delete' post}}>Delete</button>
+  <br>
 </div>
-
-
-
-
-
-
-
-<!-- ADD <button {{action 'delete' rental}}>Delete</button> for each page -->

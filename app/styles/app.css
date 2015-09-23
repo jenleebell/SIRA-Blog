@@ -1,11 +1,11 @@
 h2, h4{
   font-family: 'Quicksand', sans-serif;
-  color: white;
 }
 
 #front-page {
   padding-right: 10%;
-  text-align: right
+  text-align: right;
+  color: white;
 }
 
 .logo {
@@ -30,6 +30,10 @@ h2, h4{
   opacity: 0.9;
 }
 
+#postings {
+  font-family: 'Quicksand', sans-serif;
+  color: black;
+}
 
 
 

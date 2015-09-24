@@ -3,7 +3,15 @@ body {
 }
 
 .author-name {
-  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.comment-name {
+  font-weight: 400;
+  font-size: 115%;
+}
+
+.comment {
   font-weight: 300;
 }
 
@@ -23,10 +31,6 @@ body {
   padding-left: 35%;
 }*/
 
-.navbar {
-  padding-left: 34%;
-  font-family: 'Quicksand', sans-serif;
-}
 
 .jumbotron {
   height: 400px;
@@ -36,7 +40,7 @@ body {
 }
 
 #postings {
-  font-family: 'Quicksand', sans-serif;
+  text-align: center;
   color: black;
 }
 
@@ -47,14 +51,26 @@ a {
 }
 
 
+#post {
+  text-align: center;
+}
+
+#new-post {
+  text-align: center;
+}
 
 
 
 
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
 
-
-
-
+.navbar .navbar-collapse {
+  text-align: center;
+}
 
 
 
@@ -64,8 +80,14 @@ a {
 
 /****RESPONSIVE CSS****/
 
-@media(max-width: 800px) {
-  .nav {
-  padding-left: 0px;
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+
+  .navbar .navbar-collapse {
+    text-align: center;
   }
 }

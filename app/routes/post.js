@@ -5,14 +5,15 @@ export default Ember.Route.extend({
     return this.store.findRecord('post', params.post_id);
   },
 
-  model() {
-    return Ember.RSVP.hash({
-      posts: this.store.findAll('post'),
-      comments: this.store.findAll('comment')
-    });
-  },
-
   actions: {
+    saveComment(params) {
+      var newComment = this.store.createRecord('comment', params);
+      newComment.save();
+      params.post.save().then(function(post) {
+        post.reload();
+      });
+      this.transitionTo('post', params.post.id);
+    },
     save3(params) {
       var newPost = this.store.createRecord('post', params);
       newPost.save();
@@ -26,7 +27,7 @@ export default Ember.Route.extend({
         }
       });
       post.save();
-      this.transitionTo('post', {path: '/post/:post_id'});;
+      this.transitionTo('post', params.post.id);
     },
 
     destroyPost(post) {

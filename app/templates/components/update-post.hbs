@@ -3,7 +3,6 @@
 {{#if updatePostForm}}
 <div class='container'>
   <h2>Update {{post.title}}</h2>
-    <div class='col-md-4'>
       <form>
         <div class="form-group">
           <label for="title">Title</label>
@@ -31,7 +30,6 @@
 
       <button class='btn btn-success' {{action 'update' post}}>Save</button>
     </form>
-  </div>
 </div>
 {{else}}
   <br>

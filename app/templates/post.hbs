@@ -1,44 +1,19 @@
 {{outlet}}
 
-
-<div class='col-md-8'>
-  <h1>{{model.title}}</h1><span class="author-name"> by {{model.author}}</span>
-  <p><img src= {{model.image}} /></p>
-  <h4>{{model.description}}</h4>
-  {{update-post post=model update="update"}}
-  <button class='btn btn-danger' {{action 'delete' post}}>Delete</button>
-  <br>
-  <br>
-</div>
-
-
-{{#each model.comments as |comment|}}
-  <p>{{comment.content}} by: {{comment.name}}</p>
-{{/each}}
-
-  <div class='container'>
-    <div class='row'>
-      <div class='col-md-12'>
-      <h1>Add a comment</h1>
-        <form>
-          <div class="form-group">
-          <label for="description">Comment</label>
-          <br>
-          {{textarea value=description id="description" rows="8" cols="60"}}
-          </div>
-          {{new-comment save2="save3"}}
-        <button class='btn btn-success' {{action 'save1'}}>Save</button>
-        </form>
-      </div>
-    </div>
+<div id="post">
+  <div class='col-md-12'>
+    <h1>{{model.title}}</h1><span class="author-name"> by {{model.author}}</span>
+    <p><img src= {{model.image}} /></p>
+    <h4>{{model.description}}</h4>
+    {{update-post post=model update="update"}}
+    <button class='btn btn-danger' {{action 'delete' post}}>Delete</button>
+    <br>
+    <hr>
+  <h1>Comments</h1>
+    {{#each model.comments as |comment|}}
+      <p><span class="comment-name">{{comment.name}}</span> <span class="comment">says {{comment.content}}</span></p>
+    {{/each}}
+    <hr>
+    {{new-comment post=model saveComment="saveComment"}}
   </div>
-  <!-- {{#if addNewComment}} -->
-
-
-  <!-- <br>
-  <button class='btn btn-warning' {{action 'commentFormShow'}}>New Post</button>
-  {{else}}
-  <br>
-  <button class='btn btn-info' {{action 'newCommentShow'}}>New comment</button>
-  <br>
-  {{/if}} -->
+</div>

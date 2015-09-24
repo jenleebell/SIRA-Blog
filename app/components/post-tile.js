@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   actions: {
 
     update(post, params) {
-      this.sendAction('update', rental, params);
+      this.sendAction('update', post, params);
     },
 
     delete(post) {
@@ -13,6 +13,6 @@ export default Ember.Component.extend({
       this.sendAction('destroyPost', post);
       }
     }
-    
+
   }
 });

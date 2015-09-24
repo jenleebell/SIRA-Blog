@@ -1,0 +1,11 @@
+{{outlet}}
+
+
+<div class='col-md-8'>
+  {{model.title}}<span class="author-name"> by {{model.author}}</span>
+  <p><img src= {{model.image}} /></p>
+  <h4>{{model.description}}</h4>
+  {{update-post post=model update="update"}}
+  <button class='btn btn-danger' {{action 'delete' post}}>Delete</button>
+  <br>
+</div>

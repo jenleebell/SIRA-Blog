@@ -2,10 +2,7 @@
 
 
 <div class='col-md-8'>
-  <h2><strong>{{post.title}} </strong><span class="author-name"> by {{post.author}}</span></h2>
+  {{#link-to 'post' post.id}}{{post.title}}<span class="author-name"> by {{post.author}}</span>{{/link-to}}
   <p><img src={{post.image}} /></p>
-  <h4>{{post.description}}</h4>
-  {{update-post post=post update="update"}}
-  <button class='btn btn-danger' {{action 'delete' post}}>Delete</button>
   <br>
 </div>

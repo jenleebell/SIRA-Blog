@@ -14,6 +14,7 @@ export default Ember.Route.extend({
       });
       this.transitionTo('post', params.post.id);
     },
+
     save3(params) {
       var newPost = this.store.createRecord('post', params);
       newPost.save();
@@ -30,7 +31,7 @@ export default Ember.Route.extend({
       this.transitionTo('post', params.post.id);
     },
 
-    destroyPost(post) {
+    delete(post) {
       post.destroyRecord();
       this.transitionTo('index');
     }

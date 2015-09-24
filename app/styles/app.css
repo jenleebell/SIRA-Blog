@@ -65,10 +65,7 @@ a {
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
-  vertical-align: top;
-}
-
-.navbar .navbar-collapse {
+  vertical-align: middle;
   text-align: center;
 }
 
